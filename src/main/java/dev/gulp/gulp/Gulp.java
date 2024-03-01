@@ -6,12 +6,13 @@ public final class Gulp extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        // test
+        getLogger().info("Alive once more.");
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        // test
+        getLogger().info("Farewell.");
     }
 }
