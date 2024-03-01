@@ -15,7 +15,7 @@ public class VersionCommand implements CommandExecutor {
         if (sender instanceof Player){
              Player p = (Player) sender;
             // Send The Player The Current Plugin Version
-            p.sendMessage(ChatColor.GRAY + "GULP version " + ChatColor.GOLD + "1.0-SNAPSHOT");
+            p.sendMessage(ChatColor.GRAY + "Gulp version " + ChatColor.GOLD + "1.0-SNAPSHOT");
         }
 
         return true;
