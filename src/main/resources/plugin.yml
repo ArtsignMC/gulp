@@ -1,0 +1,5 @@
+name: gulp
+version: '${project.version}'
+main: dev.gulp.gulp.Gulp
+api-version: '1.20'
+load: STARTUP
