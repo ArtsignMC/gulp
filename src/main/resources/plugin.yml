@@ -5,6 +5,6 @@ api-version: '1.20'
 load: STARTUP
 
 commands:
-  version:
-    description: "Displays plugin version information"
-    usage: "/version"
+  gulp:
+    description: "Main command for your plugin"
+    usage: "/gulp <command>"
