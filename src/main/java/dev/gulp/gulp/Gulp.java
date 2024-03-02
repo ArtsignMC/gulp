@@ -5,6 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import dev.gulp.gulp.commands.VersionCommand;
+import dev.gulp.gulp.commands.GodModeCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,15 +30,27 @@ public final class Gulp extends JavaPlugin {
                 String subCommand = args[0].toLowerCase();
                 switch (subCommand) {
                     case "version":
+                    case "ver":
+                        if (args.length > 1) {
+                            sender.sendMessage("§8[§6§lG.U.L.P§r§8]§7 Unknown arguments, use §e/gulp version");
+                            return true; // Return true here to prevent sending "/gulp gulp"
+                        }
                         return new VersionCommand().onCommand(sender, command, label, args);
+                    case "godmode":
+                    case "god":
+                        if (args.length > 1) {
+                            sender.sendMessage("§8[§6§lG.U.L.P§r§8]§7 Unknown arguments, use §e/gulp godmode");
+                            return true; // Return true here to prevent sending "/gulp gulp"
+                        }
+                        return new GodModeCommand().onCommand(sender, command, label, args);
                     default:
-                        sender.sendMessage("Unknown command. Use /gulp <command>");
+                        sender.sendMessage("§8[§6§lG.U.L.P§r§8]§7 Unknown arguments, use §e/gulp <command>");
                         break;
                 }
             } else {
-                sender.sendMessage("Usage: /gulp <command>");
+                sender.sendMessage("§8[§6§lG.U.L.P§r§8]§7 Usage: §e/gulp <command>");
             }
-            return true;
+            return true; // Return true here to prevent sending "/gulp gulp"
         }
         return false;
     }
@@ -48,6 +61,9 @@ public final class Gulp extends JavaPlugin {
             if (args.length == 1) {
                 List<String> subCommands = new ArrayList<>();
                 subCommands.add("version");
+                subCommands.add("ver");
+                subCommands.add("godmode");
+                subCommands.add("god");
                 return subCommands;
             }
         }

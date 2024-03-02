@@ -8,3 +8,4 @@ commands:
   gulp:
     description: "Main command for your plugin"
     usage: "/gulp <command>"
+    permission: "gulp.use"
