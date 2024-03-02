@@ -9,6 +9,7 @@ commands:
     description: "Main command for your plugin"
     usage: "/gulp <command>"
     permission: "gulp.use"
+
   version:
     description: "Display plugin version."
     usage: "/version"
@@ -17,6 +18,7 @@ commands:
     description: "Display plugin version."
     usage: "/ver"
     permission: "gulp.use.version"
+
   godmode:
     description: "Toggle player godmode"
     usage: "/godmode"

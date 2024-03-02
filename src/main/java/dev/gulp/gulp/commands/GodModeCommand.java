@@ -16,6 +16,12 @@ public class GodModeCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
+        if (!player.hasPermission("gulp.godmode")) {
+            player.sendMessage("§8[§6§lG.U.L.P§r§8]§7 You don't have permission to use this command.");
+            return false;
+        }
+
+
         if (args.length == 0 || (args.length == 1 && args[0].equalsIgnoreCase("godmode") || args[0].equalsIgnoreCase("god"))) {
             toggleGodMode(player);
             return true;
