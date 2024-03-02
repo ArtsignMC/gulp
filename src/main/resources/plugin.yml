@@ -9,3 +9,19 @@ commands:
     description: "Main command for your plugin"
     usage: "/gulp <command>"
     permission: "gulp.use"
+  version:
+    description: "Display plugin version."
+    usage: "/version"
+    permission: "gulp.use.version"
+  ver:
+    description: "Display plugin version."
+    usage: "/ver"
+    permission: "gulp.use.version"
+  godmode:
+    description: "Toggle player godmode"
+    usage: "/godmode"
+    permission: "gulp.use.godmode"
+  god:
+    description: "Toggle player godmode"
+    usage: "/god"
+    permission: "gulp.use.godmode"

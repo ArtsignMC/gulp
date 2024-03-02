@@ -15,6 +15,10 @@ public final class Gulp extends JavaPlugin {
     @Override
     public void onEnable() {
         getCommand("gulp").setTabCompleter(this);
+        getCommand("version").setExecutor(new VersionCommand());
+        getCommand("ver").setExecutor(new VersionCommand());
+        getCommand("godmode").setExecutor(new GodModeCommand());
+        getCommand("god").setExecutor(new GodModeCommand());
         getLogger().info("\u001B[32m" + "[G.U.L.P] > Enabled" + "\u001B[0m");
     }
 
